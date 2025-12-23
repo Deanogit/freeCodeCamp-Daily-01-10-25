@@ -6,3 +6,26 @@
 // For example, the binary number 101 equals 5 in decimal because:
 
 // 1 * 2^2 + 0 * 2^1 + 1 * 2^0 = 4 + 0 + 1 = 5
+
+function toDecimal(binary) {
+  console.log(binary);
+
+  let counter = 0;
+  let accum = 0;
+  for (let i = binary.length - 1; i >= 0; i--) {
+    // before addin to counter, use counter
+    console.log(counter);
+    // multiply each digit by a power of 2
+    if (counter < 1) {
+      accum = binary[i] * 1;
+    }
+    accum = (binary[i] * 2) ^ counter;
+    console.log(binary[i]);
+    counter++;
+    // console.log(counter)
+  }
+
+  console.log('Accum: ', accum);
+
+  //return binary;
+}
