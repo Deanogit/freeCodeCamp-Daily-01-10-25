@@ -16,10 +16,10 @@ function toDecimal(binary) {
     // before addin to counter, use counter
     console.log(counter);
     // multiply each digit by a power of 2
-    if (counter < 1) {
-      accum = binary[i] * 1;
-    }
-    accum = (binary[i] * 2) ^ counter;
+    // if (counter < 1) {
+    //   accum = binary[i] * 1
+    // }
+    accum = accum + binary[i] * 2 ** counter;
     console.log(binary[i]);
     counter++;
     // console.log(counter)
@@ -27,5 +27,6 @@ function toDecimal(binary) {
 
   console.log('Accum: ', accum);
 
+  return accum;
   //return binary;
 }
